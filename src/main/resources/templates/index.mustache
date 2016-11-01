@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Done</title>
+	{{> meta}}
+	{{> stylesheet}}
+</head>
+
+<body>
+	{{> header}}
+
+	<h1>index</h1>
+
+	<a href="/form">Protected url by form authentication: /form</a> (use login = pwd)<br />
+	<br />
+
+	<a href="protected">Protected url: /protected</a> (won't start any login process)<br />
+	<br />
+
+	<a href="/logout?url=/?forcepostlogouturl">logout</a>
+	<br /><br />
+	profiles: {{profiles}}
+
+	{{> javascript}}
+</body>
+</html>

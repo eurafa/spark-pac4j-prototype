@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Done - Admin</title>
+	{{> meta}}
+	{{> stylesheet}}
+</head>
+
+<body class="navbar-fixed sidebar-nav fixed-nav">
+	{{> header}}
+	{{> menu}}
+
+    <!-- Main content -->
+    <main class="main">
+
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">Home</li>
+            <li class="breadcrumb-item active">Admin</li>
+        </ol>
+
+        <div class="container-fluid">
+            <div class="animated fadeIn">
+                <div class="row">
+                    <div class="col-sm-12">
+                		<h1>admin protected area</h1>
+                		<a href="..">Back</a><br />
+                		<br /><br />
+                		profiles: {{profiles}}<br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+	{{> footer}}
+	{{> javascript}}
+</body>
+</html>
