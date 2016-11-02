@@ -6,7 +6,7 @@
 	{{> stylesheet}}
 </head>
 
-<body class="navbar-fixed sidebar-nav fixed-nav pace-done aside-menu-open">
+<body class="navbar-fixed sidebar-nav fixed-nav {{^profile.attributes.isAdmin}}aside-menu-open{{/profile.attributes.isAdmin}}">
 	{{> header}}
 	{{> menu}}
 
@@ -142,7 +142,9 @@
         <!-- /.container-fluid -->
     </main>
 
-	{{> sidebar}}
+	{{^profile.attributes.isAdmin}}
+		{{> sidebar}}
+	{{/profile.attributes.isAdmin}}		
 	{{> footer}}
 	{{> javascript}}
 </body>

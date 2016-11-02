@@ -1,4 +1,4 @@
-package org.pac4j.demo.spark;
+package com.done.app.auth;
 
 import static spark.Spark.halt;
 
@@ -30,6 +30,8 @@ import org.slf4j.LoggerFactory;
 import spark.ModelAndView;
 import spark.TemplateEngine;
 import spark.template.mustache.MustacheTemplateEngine;
+
+import com.done.app.DoneApp;
 
 public class DoneConfigFactory implements ConfigFactory {
 
@@ -96,13 +98,16 @@ class CustomUsernamePasswordAuthenticator implements Authenticator<UsernamePassw
 
 		if (CommonHelper.areEquals(username, "admin")) {
 			profile.addRole("ROLE_ADMIN");
+			profile.addAttribute("isAdmin", true);
 		}
 		if (CommonHelper.areEquals(username, "pro")) {
 			profile.addRole("ROLE_PROFESSIONAL");
+			profile.addAttribute("isAdmin", false);
 		}
 		if (CommonHelper.areEquals(username, "both")) {
 			profile.addRole("ROLE_PROFESSIONAL");
 			profile.addRole("ROLE_STUDENT");
+			profile.addAttribute("isAdmin", false);
 		}
 
 		credentials.setUserProfile(profile);

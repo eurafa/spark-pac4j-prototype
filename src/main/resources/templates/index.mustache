@@ -9,17 +9,14 @@
 <body>
 	{{> header}}
 
-	<h1>index</h1>
+	<h1>SITE INSTITUCIONAL</h1>
 
-	<a href="/form">Protected url by form authentication: /form</a> (use login = pwd)<br />
+	<a href="/loginForm">Login</a><br />
 	<br />
 
-	<a href="protected">Protected url: /protected</a> (won't start any login process)<br />
-	<br />
-
-	<a href="/logout?url=/?forcepostlogouturl">logout</a>
+	<a href="/logout?url=/?forcepostlogouturl">Logout</a>
 	<br /><br />
-	profiles: {{profiles}}
+	Profile: {{profile}}
 
 	{{> javascript}}
 </body>
