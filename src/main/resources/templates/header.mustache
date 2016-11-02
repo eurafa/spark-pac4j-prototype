@@ -1,13 +1,12 @@
 <header class="navbar">
     <div class="container-fluid">
-        <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button">☰</button>
+        {{#profile}}
+            <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button">☰</button>
+        {{/profile}}
         <a class="navbar-brand" href="#">
         	<img src="" alt="[DONE]"/>
         </a>
         <ul class="nav navbar-nav float-xs-right hidden-md-down">
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="icon-bell"></i><span class="tag tag-pill tag-danger">5</span></a>
-            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <img src="/images/avatars/7.jpg" class="img-avatar">
@@ -20,13 +19,11 @@
                     <a class="dropdown-item" href="/logout?url=/?forcepostlogouturl"><i class="fa fa-lock"></i> Logout</a>
                 </div>
             </li>
-            {{^profile.attributes.isAdmin}}
-                <li class="nav-item">
+            <li class="nav-item">
+                {{^profile.attributes.isAdmin}}
                     <a class="nav-link aside-toggle" href="#">☰</a>
-                </li>
-
-                {{> sidebar}}
-            {{/profile.attributes.isAdmin}}
+                {{/profile.attributes.isAdmin}}
+            </li>                    
         </ul>
     </div>
 </header>

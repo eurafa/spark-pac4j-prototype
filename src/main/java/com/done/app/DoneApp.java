@@ -89,11 +89,15 @@ public class DoneApp {
 		before("/admin/finances", adminSecurityFilter);
 		before("/admin/exercises", adminSecurityFilter);
 		before("/admin/licenses", adminSecurityFilter);
+		before("/admin/users", adminSecurityFilter);
+		before("/admin/user", adminSecurityFilter);
 
 		get("/admin/dashboard",  DoneAdminRoutes::dashboard, DONE_DEFAULT_TEMPLATE_ENGINE);
 		get("/admin/finances",  DoneAdminRoutes::finances, DONE_DEFAULT_TEMPLATE_ENGINE);
 		get("/admin/exercises",  DoneAdminRoutes::exercises, DONE_DEFAULT_TEMPLATE_ENGINE);
 		get("/admin/licenses",  DoneAdminRoutes::licenses, DONE_DEFAULT_TEMPLATE_ENGINE);		
+		get("/admin/users",  DoneAdminRoutes::users, DONE_DEFAULT_TEMPLATE_ENGINE);		
+		get("/admin/user",  DoneAdminRoutes::user, DONE_DEFAULT_TEMPLATE_ENGINE);		
 	}
 
 	private static void init() {

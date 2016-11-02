@@ -22,7 +22,7 @@ public class DoneRoutes {
 		return map;
 	}
 
-	private static List<CommonProfile> getProfiles(final Request request, final Response response) {
+	static List<CommonProfile> getProfiles(final Request request, final Response response) {
 		final SparkWebContext context = new SparkWebContext(request, response);
 		final ProfileManager manager = new ProfileManager(context);
 		return manager.getAll(true);

@@ -42,7 +42,7 @@ public class DoneConfigFactory implements ConfigFactory {
 		final Config config = new Config(clients);
 		config.setHttpActionAdapter(new DoneHttpActionAdapter());
 		config.addAuthorizer("admin", new AdminAuthorizer());
-		config.addAuthorizer("user", new RequireAnyRoleAuthorizer("ROLE_ADMIN", "ROLE_PROFESSIONAL", "ROLE_STUDENT"));
+		config.addAuthorizer("user", new RequireAnyRoleAuthorizer("ROLE_PROFESSIONAL", "ROLE_STUDENT"));
 		return config;
 	}
 }

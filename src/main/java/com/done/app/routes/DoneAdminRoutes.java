@@ -22,4 +22,12 @@ public class DoneAdminRoutes extends DoneRoutes {
 		return new ModelAndView(mapWithProfile(request, response), "admin-licenses.mustache");
 	}
 
+	public static ModelAndView users(final Request request, final Response response) {
+		return new ModelAndView(mapWithProfile(request, response), "admin-users.mustache");
+	}
+
+	public static ModelAndView user(final Request request, final Response response) {
+		return new ModelAndView(mapWithProfile(request, response), "admin-user.mustache");
+	}
+
 }

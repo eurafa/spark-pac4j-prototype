@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Done - Alunos</title>
+	<title>Done - Usuários</title>
 	{{> meta}}
 	{{> stylesheet}}
 </head>
@@ -14,7 +14,7 @@
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">Home</li>
-            <li class="breadcrumb-item active">Alunos</li>
+            <li class="breadcrumb-item active">Usuários</li>
         </ol>
 
         <div class="container-fluid">
@@ -23,57 +23,41 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <i class="fa fa-align-justify"></i> Alunos
+                                <i class="fa fa-align-justify"></i> Usuários
                             </div>
                             <div class="card-block">
                                 <table class="table table-bordered table-striped table-condensed">
                                     <thead>
                                         <tr>
-                                            <th>Aluno</th>
-                                            <th>Data cadastro</th>
-                                            <th>Turmas</th>
+                                            <th>Usuário</th>
+                                            <th>Data registro</th>
+                                            <th>Licença</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>João da Silva</td>
+                                            <td>Diego Mottini</td>
                                             <td>10/12/2016</td>
-                                            <td>T1</td>
+                                            <td>Large</td>
                                             <td>
-                                                <span class="tag tag-success">Regular</span>
+                                                <span class="tag tag-success">Ativo</span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Ângela da Rosa</td>
-                                            <td>10/12/2016</td>
-                                            <td>T2</td>
+                                            <td>Marcio Atalla</td>
+                                            <td>04/01/2017</td>
+                                            <td>Medium</td>
                                             <td>
-                                                <span class="tag tag-danger">Lesionado</span>
+                                                <span class="tag tag-success">Ativo</span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Pedro Paulo de Oliveira</td>
-                                            <td>10/12/2016</td>
-                                            <td>T2</td>
+                                            <td>Rodrigo de Souza Nunes</td>
+                                            <td>28/12/2016</td>
+                                            <td>Small</td>
                                             <td>
                                                 <span class="tag tag-default">Inativo</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Félix de Deus</td>
-                                            <td>10/12/2016</td>
-                                            <td>T2</td>
-                                            <td>
-                                                <span class="tag tag-warning">Em atraso</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Márcio Alves</td>
-                                            <td>10/12/2016</td>
-                                            <td>T1, T2</td>
-                                            <td>
-                                                <span class="tag tag-success">Regular</span>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -94,6 +78,9 @@
                                         <li class="page-item"><a class="page-link" href="#">&rarr;</a>
                                         </li>
                                     </ul>
+                                    <div class="pagination pull-right">
+                                    	<a href="/admin/user" class="btn btn-primary">Novo usuário</a>
+                                    </div>
                                 </nav>
                             </div>
                         </div>
